@@ -13,7 +13,8 @@ class ExampleStack(Stack):
 
     def populate_template(self):
         examplevpc = BaseVPC(self.projectname, self.environmentname)
-        self.template.add_resource(examplevpc.res_vpc)
+        for resource in examplevpc.resources:
+            self.template.add_resource(resource)
 
     def output_template(self):
         super(ExampleStack, self).output_template()
