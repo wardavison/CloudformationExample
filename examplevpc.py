@@ -2,7 +2,6 @@
 """
 from troposphere import Join
 from troposphere.ec2 import VPC, Tag
-from CloudformationBase import overrides
 from CloudformationBase.BaseVPC import BaseVPC
 
 
